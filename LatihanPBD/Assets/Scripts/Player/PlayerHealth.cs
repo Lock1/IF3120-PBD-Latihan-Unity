@@ -17,8 +17,8 @@ public class PlayerHealth : MonoBehaviour
     AudioSource playerAudio;
     PlayerMovement playerMovement;
     //PlayerShooting playerShooting;
-    bool isDead;                                                
-    bool damaged;                                               
+    bool isDead;
+    bool damaged;
 
 
     void Awake()
@@ -26,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
         anim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
         playerMovement = GetComponent<PlayerMovement>();
+        // damageImage   = GameObject.FindGameObjectWithTag("DamageImageUI");
         //playerShooting = GetComponentInChildren<PlayerShooting>();
 
         currentHealth = startingHealth;
@@ -78,4 +79,8 @@ public class PlayerHealth : MonoBehaviour
         playerMovement.enabled = false;
         //playerShooting.enabled = false;
     }
+
+    // public void RestartLevel() {
+    //     SceneManager.LoadScene(0);
+    // }
 }
